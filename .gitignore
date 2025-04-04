@@ -1,0 +1,19 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore graph output images
+graphs/
+
+# Ignore any CSV output (optional)
+*.csv
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Jupyter notebook checkpoints (if any)
+.ipynb_checkpoints/
+
+# VS Code settings (optional)
+.vscode/
