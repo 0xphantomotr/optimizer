@@ -51,7 +51,7 @@ Install the following VS Code extensions:
 
 ```bash
 cd %USERPROFILE%\Documents
-git clone https://github.com/yourusername/ems-optimizer.git
+git clone https://github.com/0xphantomotr/optimizer
 cd ems-optimizer
 
 
