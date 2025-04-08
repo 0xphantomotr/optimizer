@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pulp import LpProblem, LpMinimize, LpVariable, lpSum, LpBinary, value
 from datetime import datetime
+from dotenv import load_dotenv
 import os
 import warnings
 
@@ -284,14 +285,9 @@ def plot_monthly_summary(df, outdir="graphs/monthly"):
         print(f"✅ Saved: {filename}")
 
 def main():
-    conn = psycopg2.connect(
-        host="aws-0-eu-central-1.pooler.supabase.com",
-        dbname="postgres",
-        user="postgres.ibjdukoxgacsyaeolish",
-        password="bNXC4Vvse5c3vsQ6",
-        port=6543,
-        sslmode="require"
-    )
+    load_dotenv()
+
+    conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 
     all_days = get_all_days(conn)
     soc = INITIAL_SOC
